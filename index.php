@@ -18,7 +18,7 @@
 		foreach ($xmlfile->children() as $children1){
 		 	echo "<".$children1->getName().">";
 		 		foreach ($children1->children() as $children2) {
-		 			$nama = $children2.getName();
+		 			$nama = $children2->getName();
 		 			if ($nama =='TITLE' OR $nama =='ARTIST' OR $nama =='YEAR'){
 		 				echo "<".$children2->getName().">".$children2."</".$children2->getName().">";
 		 			}
@@ -27,5 +27,4 @@
 		}
 		echo "</".$xmlfile->getName().">";
 	}
-	 
  ?>
